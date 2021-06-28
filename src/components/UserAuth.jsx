@@ -3,7 +3,7 @@ import Register from './Register'
 import { Container} from 'react-bootstrap'
 import { AuthProvider } from '../contexts/AuthContext';
 
-function App() {
+function UserAuth() {
 
   return (
     <AuthProvider>
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default UserAuth;
