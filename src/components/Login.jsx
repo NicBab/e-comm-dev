@@ -55,6 +55,9 @@ const Login = () => {
             <div className="w-100 text-center mt-2">
                 Need an account? <Link to="/signup">Sign Up here</Link> 
             </div>
+            <div className="w-100 text-center mt-2">
+              <Link to="/home">Return to home page</Link>
+            </div>
         </>
     )
 }
