@@ -51,11 +51,15 @@ const Signup = () => {
                           <Form.Control type="password" ref={passwordConfirmRef} required />
                         </Form.Group>
                         <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
+                        
                     </Form>
                 </Card.Body>
               </Card>
             <div className="w-100 text-center mt-2">
               Already have an account? <Link to="/login">Login Here</Link>
+            </div>
+            <div className="w-100 text-center mt-2">
+              <Link to="/home">Return to home page</Link>
             </div>
         </>
     )
