@@ -7,7 +7,7 @@ import { Link, useHistory } from 'react-router-dom'
 const Dashboard = () => {
     const [error, setError] = useState('')
     const { currentUser, logout } = useAuth()
-   const history = useHistory()
+    const history = useHistory()
 
     const handleLogout = async (e) => {
         e.preventDefault()
@@ -15,7 +15,7 @@ const Dashboard = () => {
 
         try {
             await logout()
-            history.pushState('/login')
+            history.push('/login')
         } catch (error) {
           setError('Failed to logut')
         }
@@ -26,9 +26,9 @@ const Dashboard = () => {
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Profile</h2>
-                    {error && <Alert variant="danger">{error}</Alert>}
+                        {error && <Alert variant="danger">{error}</Alert>}
                     <strong>Email: </strong>{currentUser.email}
-                    <Link ti="/update-profile" className="btn btn-primary w-100 mt-3">
+                    <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
                         Update Profile </Link>
                 </Card.Body>
             </Card> 
