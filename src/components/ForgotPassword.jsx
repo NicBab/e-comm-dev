@@ -6,8 +6,8 @@ import { useAuth } from '../contexts/AuthContext'
 const ForgotPassword = () => {
     const emailRef = useRef()
     const { resetPassword } = useAuth()
-    const [message, setMessage] = useState('')
     const [error, setError] = useState('')
+    const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
    
 
@@ -32,8 +32,8 @@ const ForgotPassword = () => {
           <Card>
               <Card.Body>
                   <h2 className="text-center mb-4">Password Reset</h2>
-                        {currentUser.email}
                         {error && <Alert variant="danger">{error}</Alert>}
+                        {message && <Alert variant="danger">{error}</Alert>}
                       <Form onSubmit={handleSubmit}>
                         <Form.Group id="email">
                             <Form.Label>Email</Form.Label>
