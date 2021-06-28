@@ -1,5 +1,5 @@
 import React, { useRef, useState }  from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { Form, Card, Button, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
  
@@ -9,6 +9,7 @@ const Login = () => {
     const { login, currentUser } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
+    const history = useHistoy()
 
     async function handleSubmit(e) {
       e.preventDefault()
@@ -18,6 +19,7 @@ const Login = () => {
           setError('')
           setLoading(true)
           await login(emailRef.current.value, passwordRef.current.value)
+          history.push("/")
 
         } catch (error) {
           console.error('Failed to sign in!')
