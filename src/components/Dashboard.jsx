@@ -3,7 +3,6 @@ import { Card, Button, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
 
-
 const Dashboard = () => {
     const [error, setError] = useState('')
     const { currentUser, logout } = useAuth()
@@ -17,7 +16,7 @@ const Dashboard = () => {
             await logout()
             history.push('/login')
         } catch (error) {
-          setError('Failed to logut')
+          setError('Failed to logout')
         }
     }
     
