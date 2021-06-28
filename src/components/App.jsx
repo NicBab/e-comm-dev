@@ -7,7 +7,6 @@ import { Dashboard, Signup, Login } from './index'
 function App() {
 
   return (
-      
         <Container 
           className="d-flex align-items-center justify-content-center" 
           style={{ minHeight: "100vh"}}>
@@ -23,8 +22,7 @@ function App() {
             </Router>
           </div> 
         </Container>
-      
-  );
+    );
 }
 
 export default App;
