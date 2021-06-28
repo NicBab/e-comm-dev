@@ -10,7 +10,6 @@ const ForgotPassword = () => {
     const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
    
-
     async function handleSubmit(e) {
       e.preventDefault()
 
@@ -39,18 +38,20 @@ const ForgotPassword = () => {
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required />
                         </Form.Group>
-
-                      <Button disabled={loading} className="w-100" type="submit">Reset Password</Button>
-                  </Form>
-                  <div className="w-100 text-center mt-3">
-                      <Link to="/login">Login</Link>
-                  </div>
-                  
-              </Card.Body>
-          </Card>
-          <div className="w-100 text-center mt-2">
-            Need an account? <Link to="/signup">Sign Up here</Link> 
-          </div>
+                        <Button 
+                            disabled={loading} 
+                            className="w-100" 
+                            type="submit">Reset Password
+                        </Button>
+                    </Form>
+                    <div className="w-100 text-center mt-3">
+                        <Link to="/login">Login</Link>
+                    </div>
+                </Card.Body>
+              </Card>
+            <div className="w-100 text-center mt-2">
+                Need an account? <Link to="/signup">Sign Up here</Link> 
+            </div>
         </>
     )
 }

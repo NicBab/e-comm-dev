@@ -64,7 +64,7 @@ const UpdateProfile = () => {
                         <Button disabled={loading} className="w-100" type="submit">Update</Button>
                     </Form>
                 </Card.Body>
-            </Card>
+              </Card>
             <div className="w-100 text-center mt-2">
               <Link to="/">Cancel</Link>
             </div>

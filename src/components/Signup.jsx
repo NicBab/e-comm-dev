@@ -53,7 +53,7 @@ const Signup = () => {
                         <Button disabled={loading} className="w-100" type="submit">Sign Up</Button>
                     </Form>
                 </Card.Body>
-            </Card>
+              </Card>
             <div className="w-100 text-center mt-2">
               Already have an account? <Link to="/login">Login Here</Link>
             </div>
