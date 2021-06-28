@@ -9,7 +9,7 @@ const Login = () => {
     const { login, currentUser } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
-    const history = useHistoy()
+    const history = useHistory()
 
     async function handleSubmit(e) {
       e.preventDefault()
